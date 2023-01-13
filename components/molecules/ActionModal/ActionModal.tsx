@@ -50,7 +50,7 @@ const ActionModal: React.FC<ActionModalProps> = ({
           <div className="flex items-center justify-between">
             <Dialog.Title
               as="h3"
-              className="font-headings text-md font-semibold uppercase text-primary">
+>
               {title}
             </Dialog.Title>
           </div>
