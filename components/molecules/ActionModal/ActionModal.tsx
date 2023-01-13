@@ -37,7 +37,6 @@ const ActionModal: React.FC<ActionModalProps> = ({
           leave="ease-in duration-200"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
-          className="fixed inset-0 z-backdrop bg-[rgba(0,0,0,0.3)]"
         />
         <Transition.Child
           as={Dialog.Panel}
