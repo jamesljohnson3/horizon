@@ -23,6 +23,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "graphql:generate": "graphql-codegen --config codegen.yml -r dotenv/config",
+    "theme:generate": "node -r dotenv/config ./build-utils/generate-theme.mjs",
     "chromatic": "npx chromatic",
     "sync:defaults": "swell storefront settings push settings -f ./config/defaults.json --strategy \"defaults\" --store $SWELL_STORE_ID --secret-key $SWELL_SECRET_KEY",
     "sync:content-blocks": "ls ./config/content/*.json | xargs -L 1 swell model push --store $SWELL_STORE_ID --secret-key $SWELL_SECRET_KEY --strategy \"merge\" --content -f",
