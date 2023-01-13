@@ -9,6 +9,10 @@ export function getVarsFromObject(
   label = '',
   transform = (value) => value,
 ) {
+  if (!object) {
+    return [];
+  }
+
   const vars = [];
   const prefix = label ? `${label}-` : '';
   Object.entries(object).forEach(([key, value]) => {
@@ -22,6 +26,9 @@ export function getVarsFromObject(
 }
 
 export function generateCssVars(settings) {
+  if (!settings) {
+    return [];
+  }
   const fontSizeVars = generateFontSizeVars(settings.typography?.font_size);
   const fontFamilyVars = generateFontFamilyVars(
     settings.typography?.font_family,
